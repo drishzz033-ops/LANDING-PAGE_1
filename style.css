@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0e0e0e;
+  color: white;
+  overflow: hidden;
+}
+
+.hero {
+  animation: fadeIn 2s ease forwards;
+  opacity: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+
+.coffee-cup {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: url('coffee.jpg') center/contain no-repeat;
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0px 0px 8px rgba(255, 153, 51, 0.25));
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-20px) scale(1.05); }
+  100% { transform: translateY(0px) scale(1); }
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 20px;
+  text-shadow: 0 0 20px rgba(255, 170, 80, 0.6);
+}
+
+p {
+  width: 70%;
+  max-width: 600px;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  margin-top: 10px;
+}
+
+.order-btn {
+  padding: 15px 35px;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  background: #ff9900;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  color: #000;
+  animation: pulse 2.5s infinite ease-in-out;
+}
+
+.order-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(255, 160, 0, 1);
+}
+
+.bean {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: url('bean.png') center/contain no-repeat;
+  animation: beanFloat 155s linear infinite;
+  opacity: 0.45;
+}
+
+@keyframes beanFloat {
+  0% { transform: translateY(120vh) rotate(0deg); }
+  100% { transform: translateY(-20vh) rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

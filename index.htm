@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coffee Spotlight</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="hero">
+    <!-- Coffee Cup Animation -->
+    <div class="coffee-cup"></div>
+
+    <!-- Text Content -->
+    <h1>Caramel Bliss Latte</h1>
+    <p>Experience the smooth, creamy richness of our signature Caramel Bliss Latte—crafted with premium beans, velvety milk, and golden caramel drizzle.</p>
+
+    <!-- Order Button -->
+    <button class="order-btn">ORDER NOW</button>
+  </div>
+
+  <script src="script.js"></script>
+
+  <script>
+    // Parallax movement for cup
+    document.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 10;
+      const y = (e.clientY / window.innerHeight - 0.5) * 10;
+      const cup = document.querySelector('.coffee-cup');
+      cup.style.transform = `translate(${x}px, ${y}px) scale(1.05)`;
+    });
+  </script>
+
+</body>
+</html>
